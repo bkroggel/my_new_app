@@ -1,6 +1,6 @@
 == README
 
-Hey guys, this is my very first ruby on rails application <> with &#9825; and the help of CareerFoundry.
+Hey guys, this is my very first ruby on rails application <> with :heart: and the help of CareerFoundry.
 
 Things you may want to cover:
 
