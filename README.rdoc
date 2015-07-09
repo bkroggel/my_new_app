@@ -1,7 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hey guys, this is my very first ruby on rails application <> with &#9825; and the help of CareerFoundry.
 
 Things you may want to cover:
 
