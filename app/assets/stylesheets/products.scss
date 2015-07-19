@@ -34,12 +34,13 @@
   text-transform: uppercase;
 }
 
-td.product_column {
+td.product_column,
+th.product_column {
   padding-right: 20px;
 }
 
-.btn-group-tools {
-  min-width: 127px;
+.dropdown-menu>li>a {
+  width: 100%;
 }
 
 .new_product_button,
