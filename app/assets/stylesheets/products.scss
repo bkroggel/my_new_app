@@ -1,3 +1,48 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/**
+ * Description: Short description.
+ * Version: 0.0.1
+ * Last update: 2015/07/xx
+ * Author: Bastian Kroggel <username@gmail.com>
+ *
+ * Summary:
+ *
+ *  1. TABLE
+ *    - 1.1. TYPE ELEMENT
+ *    - 1.2. TYPE ELEMENT
+ */
+
+/* ==========================================================================
+   1. TABLE
+   ========================================================================== */
+.field,
+.actions {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.new_product_button {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.product_button {
+  width: auto;
+}
+
+.field input,
+.field textarea {
+  border-radius: 4px;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  background-color: #e6e6e6;
+  width: 30em;
+}
+
+.field textarea {
+  height: 10em;
+}
