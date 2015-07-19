@@ -2,17 +2,77 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+/**
+ * Description: Short description.
+ * Version: 0.0.1
+ * Last update: 2015/07/xx
+ * Author: Bastian Kroggel <username@gmail.com>
+ *
+ * Summary:
+ *
+ *  0. BASICS
+ *    - 0.1. FONTS
+ *    - 0.2. ELEMENTS
+ *  1. HEADER
+ *    - 1.1. APPLICATION HEADER
+ *    - 1.2. STATIC SITE HEADER
+ *
+ *
+ *  
+ */
+
+/* ==========================================================================
+   0. BASICS
+   ========================================================================== */
+body {
+  width: 100%;
+}
+
+img {
+  margin-top: 30px;
+}
+
+/* 0.1. FONTS
+   ========================================================================== */
 h1,
-h2 {
+h2,
+p {
   font-family: Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  color: rgb(33, 33, 33);
+  font-weight: 300;
+  margin: 0 auto;
+  width: 90%;
+
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
-h2 {
+header h1,
+header h2 {
+  padding: 0;
+}
+
+header h1 {
+  font-size: 5.5em;
+  text-transform: uppercase;
+  color: rgb(33, 33, 33);
+  font-weight: 400;
+}
+
+header h2 {
   font-size: 1em;
+}
+
+/* 0.2. ELEMENTS
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1.0 HEADER
+   ========================================================================== */
+header,
+.site--header {
+  margin: 30px 0;
 }
