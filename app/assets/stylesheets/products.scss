@@ -24,12 +24,14 @@
   margin: 0 auto;
 }
 
-.new_product_button {
+.new_product_button,
+.back_button_frame {
   width: 90%;
   margin: 0 auto;
 }
 
-.product_button {
+.product_button,
+.back_button {
   width: auto;
 }
 
@@ -41,8 +43,17 @@
   border: none;
   background-color: #e6e6e6;
   width: 30em;
+  height: 2em;
 }
 
 .field textarea {
   height: 10em;
+}
+
+a.back_button:visited {
+  color: white;
+}
+
+.back_button {
+  margin-top: 30px;
 }
