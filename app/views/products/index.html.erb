@@ -2,7 +2,7 @@
 
 <h1>Listing Products</h1>
 
-<table>
+<table class="product--table">
   <thead>
     <tr>
       <th>Name</th>
@@ -15,9 +15,9 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= product.name %></td>
-        <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
+        <td class="product_column"><%= product.name %></td>
+        <td class="product_column"><%= product.description %></td>
+        <td class="product_column"><%= product.image_url %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>

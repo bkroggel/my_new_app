@@ -24,6 +24,21 @@
   margin: 0 auto;
 }
 
+.product--table {
+  margin-top: 30px;
+}
+
+.product--table th {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+td.product_column {
+  min-width: 200px;
+  padding-right: 20px;
+}
+
 .new_product_button,
 .back_button_frame {
   width: 90%;
