@@ -31,7 +31,8 @@
 }
 
 .product_button,
-.back_button {
+.back_button,
+.btn {
   width: auto;
 }
 
@@ -55,5 +56,11 @@ a.back_button:visited {
 }
 
 .back_button {
+  margin-top: 30px;
+}
+
+.btn-group-frame {
+  width: 90%;
+  margin: 0 auto;
   margin-top: 30px;
 }
