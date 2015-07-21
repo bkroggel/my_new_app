@@ -20,6 +20,11 @@
   <%= @product.colour %>
 </p>
 
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
 <div class="btn-group-frame">
   <div class="btn-group" role="group">
     <%= link_to 'Edit', edit_product_path(@product), :class => "btn btn-default" %>
