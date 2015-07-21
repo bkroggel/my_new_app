@@ -39,7 +39,8 @@ h1,
 h2,
 p,
 table,
-a {
+a,
+.featured {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 300;
   margin: 0 auto;
@@ -77,3 +78,7 @@ header,
 .site--header {
   margin: 30px 0;
 }
+
+/* ==========================================================================
+   2.0 Landing Page
+   ========================================================================== */
