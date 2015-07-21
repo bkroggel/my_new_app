@@ -60,4 +60,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  #roots added for the new orders
+  resources :orders, only: [:index, :show, :new, :create]
 end
