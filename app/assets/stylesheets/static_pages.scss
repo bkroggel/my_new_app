@@ -95,7 +95,7 @@ nav li a {
   margin-right: 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-collapse>.navbar-nav {
     width: auto;
   }
@@ -130,7 +130,7 @@ nav li a {
   margin-bottom: 15px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .search-field-header {
     text-align: right;
   }
