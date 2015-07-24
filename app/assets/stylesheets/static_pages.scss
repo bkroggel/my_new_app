@@ -86,7 +86,24 @@ header h2 {
 
 nav li a {
   width: 100%;
+  text-align: center;
 }
+
+.navbar-collapse>.navbar-nav {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media (min-width: 992px) {
+  .navbar-collapse>.navbar-nav {
+    width: auto;
+  }
+}
+
+// .navbar-collapse>.navbar-nav>li>a {
+//   text-align: center;
+// }
 
 .navbar-default .navbar-nav>li>a:hover {
   background-color: rgb(37, 58, 78);
@@ -100,6 +117,39 @@ nav li a {
 .navbar-default .brand-back {
   width: 50px;
 }
+
+.search-frame {
+  float: right;
+  width: 100%;
+  text-align: center;
+}
+
+.search-field-header {
+  text-align: center;
+  padding-right: 15px;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 992px) {
+  .search-field-header {
+    text-align: right;
+  }
+}
+
+.text-field-searchbox,
+.text-field-searchbutton {
+  border: 1px solid white;
+  border-radius: 10px;
+  background: none;
+  color: white;
+  width: 300px;
+  outline: none;
+}
+
+.text-field-searchbutton {
+  width: 100px;
+}
+
 
 /* 1.2 HEADER
    ========================================================================== */

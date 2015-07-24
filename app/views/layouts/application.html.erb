@@ -39,6 +39,12 @@
           <li><%= link_to "Contact", static_pages_contact_path %></li>
           <li><a href="">Checkout</a></li>
         </ul>
+        <div class="search-frame">
+          <%= form_tag("/products", method: "get", :class => "search-field-header") do %>
+            <%= text_field_tag(:q, nil , :class => "text-field-searchbox") %>
+            <%= submit_tag("Search", :class => "text-field-searchbutton") %>
+          <% end %>
+        </div>
       </div>
     </div>
   </nav>
