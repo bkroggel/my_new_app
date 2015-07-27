@@ -101,10 +101,6 @@ nav li a {
   }
 }
 
-// .navbar-collapse>.navbar-nav>li>a {
-//   text-align: center;
-// }
-
 .navbar-default .navbar-nav>li>a:hover {
   background-color: rgb(37, 58, 78);
   color: white;
@@ -137,7 +133,8 @@ nav li a {
 }
 
 .text-field-searchbox,
-.text-field-searchbutton {
+.text-field-searchbutton,
+.mail-form {
   border: 1px solid white;
   border-radius: 10px;
   background: none;
@@ -164,3 +161,27 @@ header,
 .carousel img {
   margin-top: 0;
 }
+
+/* ==========================================================================
+   3.0 Contact Page
+   ========================================================================== */
+.mail-contact-formula {
+  margin: 0 auto;
+  width: 60%;
+  margin-top: 30px;
+}
+
+.mail-form {
+  color: rgb(41, 47, 53);
+  border-color: rgb(41, 47, 53);
+  width: 100%; 
+}
+
+.mail-form-text {
+  height: 300px !important;
+}
+
+.submit-mail-button:hover {
+  background-color: grey;
+}
+
