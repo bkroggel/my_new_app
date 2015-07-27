@@ -1,10 +1,93 @@
-<table>
-  <tbody>
-    <tr>
-      <td><p>You have received a new contact form message. The contents of the message are:</p></td>
-    </tr>
-    <tr>
-      <td><p><%= @message %></p></td>
-    </tr>
-  </tbody>
-</table>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Info Message</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <style type="text/css">
+    
+    body {
+      background-color: black;
+      width: 100%;
+      height: 100%;
+    }
+
+    .widths {
+      width: 70%;
+      height: 100%;
+      margin: 0 auto;
+      background-color: white;
+      padding: 0 60px;
+    }
+
+    p {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin: 0;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    .message_info_header {
+      text-transform: uppercase;
+      font-size: 10px;
+    }
+    
+    .no-texttransform {
+      text-transform: none;
+    }
+
+    .logo {
+      width:40px;
+      height:auto;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .top-space {
+      margin-top: 30px;
+    }
+
+    .message-container {
+      margin-top: 30px;
+      margin-bottom: 70px;
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="widths">
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <%= image_tag 'logo.png', class: "logo top-space" %>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="message_info_header">
+            <p class="top-space">You have received a new contact form message.</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="message_info_header">
+            <p>From: <span class="no-texttransform"><%= @email %></span></p>
+          </td>
+        </tr>
+        <tr>
+          <td class="message_info_header">
+            <p>Name: <span class="no-texttransform"><%= @name %></span></p>
+          </td>
+        </tr>
+        <tr>
+          <td><p class="message-container"><%= @message %></p></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
