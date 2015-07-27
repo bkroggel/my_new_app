@@ -2,6 +2,7 @@ class UserMailer < ApplicationMailer
   default from: "from@example.com"
 
   def contact_form(email, name, message)
+  attachments.inline['bk.png'] = File.read("#{Rails.root}/public/images/bk.png")
   @message = message
   @email = email
   @name = name
