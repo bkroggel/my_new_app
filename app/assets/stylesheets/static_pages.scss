@@ -84,9 +84,15 @@ header h2 {
   float: right;
 }
 
-nav li a {
+.navbar-nav li a {
   width: 100%;
   text-align: center;
+  line-height: 10px;
+}
+
+.navbar-collapse {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .navbar-collapse>.navbar-nav {
@@ -99,6 +105,18 @@ nav li a {
   .navbar-collapse>.navbar-nav {
     width: auto;
   }
+  .navbar-nav li {
+    margin-bottom: 15px;
+  }
+  .navbar-nav li a {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .navbar-collapse {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
 }
 
 .navbar-default .navbar-nav>li>a:hover {
@@ -122,7 +140,6 @@ nav li a {
 
 .search-field-header {
   text-align: center;
-  padding-right: 15px;
   margin-bottom: 15px;
 }
 
