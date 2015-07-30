@@ -368,24 +368,25 @@ h4.new-review--header {
   margin-top: 50px;
 }
 
-.pagination>.previous_page span,
-.pagination>.next_page span {
-  border: 1px solid grey;
-  border-radius: 20px;
-  padding: 5px 10px; 
-}
-
 .pagination>em,
 .pagination>a {
   border: 1px solid grey;
   border-radius: 5px;
   padding: 5px 10px;
+    &:hover {
+      text-decoration: none;
+    }
 }
 
 a.next_page,
-a.previous_page {
-  border: none;
-  padding: 0;
+a.previous_page,
+.pagination .disabled {
+  border: 1px solid grey;
+  border-radius: 20px;
+  padding: 5px 10px; 
+    &:hover {
+      text-decoration: none;
+    }
 }
 
 em.current {
