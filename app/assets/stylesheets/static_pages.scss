@@ -43,7 +43,6 @@ a, {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 300;
   margin: 0 auto;
-  width: 90%;
 }
 
 h1 {
@@ -69,6 +68,11 @@ header h2 {
 /* 0.2. ELEMENTS
    ========================================================================== */
 
+
+.width_frame {
+  width: 90%;
+  margin: 0 auto;
+}
 
 /* ==========================================================================
    1.0 HEADER
@@ -192,15 +196,33 @@ header,
    3.0 Contact Page
    ========================================================================== */
 .mail-contact-formula {
-  margin: 0 auto;
-  width: 60%;
   margin-top: 30px;
 }
 
+@media (min-width: 768px) {
+  .mail-contact-formula { 
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+  }
+}
+
+.mail-contact-formula .row {
+  margin: 0;
+}
+
+.mail-contact-formula h1 {
+  margin-bottom: 20px;
+}
+
 .mail-form {
-  color: rgb(41, 47, 53);
-  border-color: rgb(41, 47, 53);
-  width: 100%; 
+  color: black;
+  width: 100%;
+  max-width: 100%;
+  background-color: #e6e6e6;
+  box-shadow: none;
 }
 
 .mail-form-text {
@@ -225,11 +247,6 @@ header,
 /* ==========================================================================
    5. Products
    ========================================================================== */
-.field,
-.actions {
-  width: 90%;
-  margin: 0 auto;
-}
 
 .product--table {
   margin-top: 30px;
@@ -252,13 +269,6 @@ th.product_column {
 
 .btn-group-tools {
   display: flex;
-}
-
-.new_product_button,
-.back_button_frame,
-.button_frame {
-  width: 90%;
-  margin: 0 auto;
 }
 
 .button_frame p {
@@ -298,13 +308,18 @@ a.back_button:visited {
 }
 
 .btn-group-frame {
-  width: 90%;
-  margin: 0 auto;
   margin-top: 30px;
 }
 
 a.btn.btn-default {
   margin-right: 0;
+}
+
+.show_room img {
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 /* RATING
@@ -317,6 +332,10 @@ a.btn.btn-default {
 
 .product_reviews--row {
   margin: 0;
+}
+
+.review_bottom {
+  margin-bottom: 50px;
 }
 
 .new-review--frame {
