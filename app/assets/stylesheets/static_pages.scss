@@ -306,3 +306,27 @@ a.back_button:visited {
 a.btn.btn-default {
   margin-right: 0;
 }
+
+/* RATING
+   ========================================================================== */
+.rating img,
+.rated img {
+  margin: 5px 0;
+  width: 16px;
+}
+
+.product_reviews--row {
+  margin: 0;
+}
+
+.new-review--frame {
+  margin-top: 100px;
+}
+
+h4.new-review--header {
+  text-transform: uppercase;
+}
+
+.new-review--rating {
+  margin: 30px 0; 
+}
