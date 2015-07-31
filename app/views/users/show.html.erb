@@ -1,14 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+<div class="width_frame">
+  <p>
+    <strong>First name:</strong>
+    <%= @user.first_name %>
+  </p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+  <p>
+    <strong>Last name:</strong>
+    <%= @user.last_name %>
+  </p>
+  
+  <div class="btn-group-frame">
+    <div class="btn-group" role="group">
+      <%= link_to 'Edit', edit_user_path(@user), :class => "btn btn-default" %>
+      <%= link_to 'Back', user_path, :class => "btn btn-default" %>
+    </div>
+  </div>
+</div>

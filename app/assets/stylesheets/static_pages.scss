@@ -120,7 +120,6 @@ header h2 {
     padding-right: 15px;
     padding-left: 15px;
   }
-
 }
 
 .navbar-default .navbar-nav>li>a:hover {
@@ -294,7 +293,8 @@ th.product_column {
 }
 
 @media (min-width: 768px) {
-  #comment_body {
+  #comment_body,
+  input.login--field {
     width: 50%;
   }
 }
