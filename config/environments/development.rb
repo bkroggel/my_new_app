@@ -42,4 +42,7 @@ Rails.application.configure do
   #any dynamic links that show up inside emails from your development environment generate the right URLs
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
+  #added preview environment for mails
+  config.action_mailer.preview_path = "#{Rails.root}/app/mailers"
+
 end
