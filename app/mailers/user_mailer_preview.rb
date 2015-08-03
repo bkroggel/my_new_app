@@ -5,4 +5,8 @@ class UserMailerPreview < ActionMailer::Preview
     name = "Max Mustermann" 
     UserMailer.contact_form(email, name, message)
   end
+
+  def welcome_email
+    UserMailer.welcome_email
+  end
 end

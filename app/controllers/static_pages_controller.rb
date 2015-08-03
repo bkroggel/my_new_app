@@ -15,7 +15,6 @@ class StaticPagesController < ApplicationController
     #   :subject => "A new contact form message from #{@name}",
     #   :body => @message).deliver
     UserMailer.contact_form(@email, @name, @message).deliver
-  
   end
 
 end
