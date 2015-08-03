@@ -12,7 +12,7 @@ class UserMailer < ApplicationMailer
   end
 
   def welcome_email(user)
-    attachments.inline['bk.png'] = File.read("#{Rails.root}/public/images/bk.png")
+    attachments.inline['ideamanufactorylogo.png'] = File.read("#{Rails.root}/public/images/ideamanufactorylogo.png")
     @user = user
       mail(:from => 'b.kroggel@zeppelin-university.net',
           :to => user.email,

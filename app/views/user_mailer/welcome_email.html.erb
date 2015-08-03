@@ -7,7 +7,7 @@
   <style type="text/css">
     
     body {
-      background-color: black;
+      background-color: rgba(0, 0, 0, 0.2);
       width: 100%;
       height: 100%;
     }
@@ -15,9 +15,10 @@
     .widths {
       width: 70%;
       height: 100%;
-      margin: 0 auto;
+      margin: 70px auto;
       background-color: white;
       padding: 0 60px;
+      border-radius: 5px;
     }
 
     p {
@@ -29,15 +30,6 @@
 
     table {
       width: 100%;
-    }
-
-    .message_info_header {
-      text-transform: uppercase;
-      font-size: 10px;
-    }
-    
-    .no-texttransform {
-      text-transform: none;
     }
 
     .logo {
@@ -57,6 +49,20 @@
       margin-bottom: 70px;
     }
 
+    .call_hey {
+      text-align: center;
+      font-size: 2em;
+    }
+
+    .box {
+      padding: 30px;
+      border-radius: 5px;
+      width: 80%;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      margin: 30px auto;
+      line-height: 25px;
+    }
+
   </style>
 
 </head>
@@ -66,28 +72,40 @@
       <thead>
         <tr>
           <th>
-            <%= image_tag attachments["bk.png"].url, class: "logo" -%>
+            <%= image_tag attachments["ideamanufactorylogo.png"].url, class: "logo" -%>
           </th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="message_info_header">
-            <p class="top-space">You have received a new contact form message.</p>
+          <td>
+            <p class="top-space call_hey"> Hey <%= "#{@user.first_name}" %>,</p>
           </td>
         </tr>
         <tr>
-          <td class="message_info_header">
-            <p>From: <span class="no-texttransform"></span></p>
+          <td>
+            <div class="box">
+              <p>I'd like to tell you a little story about this store. <br>
+              There were a few people out there creating stuff, thinking about what they worked on and reconfiguring everything they did in the past just to make their customers happy. <br>
+              They nearly forgot what it is to succeed, how it feels to know that there will be a happy end in life.
+              But then - not long ago - there was a really special moment by <%= "#{@user.created_at}" %> when a customer knocked on their door and they immediately recognized that everything will be fine.
+              <br>
+              My dear friend <%= "#{@user.first_name}" %>...That customer was <span style="font-style: italic">you</span>.</p>
+            </div>
           </td>
         </tr>
         <tr>
-          <td class="message_info_header">
-            <p>Name: <span class="no-texttransform"></span></p>
+          <td>
+            <p>I totally apreciate that you joined our jurney of creating something beautifull. Thank you so much and - of course - <a href="https://www.tape.tv/bon-jovi/videos/have-a-nice-day-1">have a nice day!</a></p>
           </td>
         </tr>
         <tr>
-          <td><p class="message-container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti aspernatur cupiditate unde autem, ipsam tempora ad quisquam. Officia laborum dignissimos fuga possimus, commodi repellendus cumque nam alias, quod vitae voluptatum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quod nihil hic non perferendis voluptatibus vel accusamus dicta quam, eum commodi impedit exercitationem asperiores consequatur expedita aliquam cum, veritatis. Voluptatum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat eos libero aliquid fugit temporibus modi quos veniam illo, rerum dignissimos quaerat expedita, tempore sapiente quisquam corporis ducimus hic, error, illum!</p></td>
+          <td>
+            <p class="top-space">
+              Sincerely yours <br>
+              Bastian 
+            </p>
+          </td>
         </tr>
       </tbody>
     </table>
