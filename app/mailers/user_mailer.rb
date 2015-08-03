@@ -16,6 +16,6 @@ class UserMailer < ApplicationMailer
     @user = user
       mail(:from => 'b.kroggel@zeppelin-university.net',
           :to => user.email,
-          :subject  => "Hey, welcome at the center of creativity!")
+          :subject  => "Hey #{user.first_name}, welcome at the center of creativity!")
   end
 end
