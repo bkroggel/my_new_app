@@ -6,9 +6,7 @@ class User < ActiveRecord::Base
   has_many :orders
   after_create :welcome_email 
 
-  private
-
-    def welcome_email
-      UserMailer.welcome_email.deliver
-    end
+  def welcome_email
+    UserMailer.welcome_email(self).deliver
+  end
 end

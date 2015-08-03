@@ -11,10 +11,11 @@ class UserMailer < ApplicationMailer
         :subject => "A new contact form message from #{name}")
   end
 
-  def welcome_email
+  def welcome_email(user)
     attachments.inline['bk.png'] = File.read("#{Rails.root}/public/images/bk.png")
+    @user = user
       mail(:from => 'b.kroggel@zeppelin-university.net',
-          :to => :email,
+          :to => user.email,
           :subject  => "Hey, welcome at the center of creativity!")
   end
 end
