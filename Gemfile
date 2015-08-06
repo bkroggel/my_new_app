@@ -31,6 +31,11 @@ gem 'cancancan'
 # pagination module
 gem 'will_paginate'
 
+# Rspec Test
+%w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+  gem lib, :git => "git://github.com/rspec/#{lib}.git", :branch => 'master'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
