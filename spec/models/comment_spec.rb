@@ -3,7 +3,7 @@ require 'rails_helper'
     
     context "presence of body" do
       before { 
-        @user = User.new();
+        @user = User.new()
         @product = Product.new()
       }
         it "should be invalid without the needed stuff" do
