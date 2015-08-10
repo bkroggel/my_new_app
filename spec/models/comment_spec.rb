@@ -24,19 +24,11 @@ require 'rails_helper'
           expect(comment).to be_invalid
         end
 
-        #
-        # why does it still
-        # work, even the rating is
-        # now a string?
-        #
         it "it still works although rating is a string and should be integer" do
           comment = Comment.new(body: "Testcontent", rating: "5", user: @user, product: @product) 
           comment.valid?
           expect(comment).to be_valid
         end
-        #
-        #
-        #
 
         it "should fail becaus body is empty" do
           comment = Comment.new(body: "", rating: 5, user: @user, product: @product) 
