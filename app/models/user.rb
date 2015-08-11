@@ -7,6 +7,6 @@ class User < ActiveRecord::Base
   after_create :welcome_email 
 
   def welcome_email
-    UserMailer.welcome_email(self).deliver
+    UserMailer.welcome_email(self).deliver_now
   end
 end
