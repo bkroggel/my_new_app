@@ -3,8 +3,8 @@ require 'rails_helper'
     
     context "presence of body" do
       before { 
-        @user = User.new()
-        @product = Product.new()
+        @user = build(:user)
+        @product = build(:product)
       }
         it "should be invalid without the needed stuff" do
           comment = Comment.new(body: nil, user: nil, product: nil, rating: "blub")

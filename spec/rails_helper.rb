@@ -54,4 +54,7 @@ RSpec.configure do |config|
 
   # Dienstag, 11. August 2015 - Added DeviseHelper for Authentication
   config.include Devise::TestHelpers, type: :controller
+
+  # Dienstag, 18. August 2015 - Added FactoryGirl
+  config.include FactoryGirl::Syntax::Methods
 end

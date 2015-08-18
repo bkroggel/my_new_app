@@ -34,7 +34,7 @@ require 'rails_helper'
     # end
 
     context "show input by user" do
-      before { @user = User.new(first_name: "John", last_name: "Smith", email: "john@smith.com") }
+      before { @user = build(:user) }
 
       it "should return first name" do
         expect(@user.first_name).to eq "John"

@@ -2,10 +2,10 @@ require 'rails_helper'
 
 describe ProductsController, :type => :controller do
   before do
-    @user = User.create(email: "max@mustermann.de", password: "12345678")
+    @user = create(:user)
     sign_in @user 
     get :index, id: @user.id
-    @product = Product.create(name: "Monster", description: "Nice", colour: "Blue", price: "300")
+    @product = create(:product)
   end 
 
   describe "GET #index" do

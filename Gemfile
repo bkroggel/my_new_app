@@ -31,6 +31,9 @@ gem 'cancancan'
 # pagination module
 gem 'will_paginate'
 
+# factory_girl
+gem 'factory_girl_rails', '~> 4.0'
+
 # Rspec Test
 %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
   gem lib, :git => "git://github.com/rspec/#{lib}.git", :branch => 'master'
