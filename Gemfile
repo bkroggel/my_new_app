@@ -35,9 +35,7 @@ gem 'will_paginate'
 gem 'factory_girl_rails', '~> 4.0'
 
 # Rspec Test
-%w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
-  gem lib, :git => "git://github.com/rspec/#{lib}.git", :branch => 'master'
-end
+gem 'rspec-rails', '~> 3.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -64,6 +62,7 @@ group :development, :test do
   gem 'guard'
   gem 'guard-rspec', require: false
   gem 'spork-rails'
+  gem 'guard-spork'
 end
 
 #database for heroku servers
