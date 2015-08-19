@@ -37,6 +37,9 @@ gem 'factory_girl_rails', '~> 4.0'
 # Rspec Test
 gem 'rspec-rails', '~> 3.0'
 
+# Stripe Payments
+gem 'stripe'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
