@@ -9,4 +9,7 @@
     data-currency="EUR"
     data-allow-remember-me="true">
   </script>
+  <%= hidden_field_tag 'product_id', @product.id %>
+  <%= hidden_field_tag 'product_name', @product.name %>
+  <!--<%= hidden_field_tag 'user_id', :currentUser %> -->
 </form>
