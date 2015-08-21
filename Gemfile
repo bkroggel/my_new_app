@@ -66,6 +66,9 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'spork-rails'
   gem 'guard-spork'
+
+  # brakeman security
+  gem "brakeman", :require => false
 end
 
 #database for heroku servers

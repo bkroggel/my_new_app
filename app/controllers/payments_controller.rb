@@ -3,7 +3,7 @@ class PaymentsController < ApplicationController
     token = params[:stripeToken]
     @product = Product.find(params[:product_id])
     # @user = User.find(params[:user_id]
-
+      
     begin
       charge = Stripe::Charge.create(
         :amount => (@product.price * 100).to_i,
