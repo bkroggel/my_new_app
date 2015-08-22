@@ -18,4 +18,13 @@ class UserMailer < ApplicationMailer
           :to => user.email,
           :subject  => "Hey #{user.first_name}, welcome at the center of creativity!")
   end
+
+  def order_confirmation_user(user, product)
+    attachments.inline['ideamanufactorylogo.png'] = File.read("#{Rails.root}/public/images/ideamanufactorylogo.png")
+    @user = user
+    @product = product
+      mail(:from => 'b.kroggel@zeppelin-university.net',
+            :to => user.email,
+            :subject => "OrderConfirmation for #{product.name}")
+  end
 end

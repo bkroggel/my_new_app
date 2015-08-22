@@ -9,4 +9,8 @@ class UserMailerPreview < ActionMailer::Preview
   def welcome_email
     UserMailer.welcome_email(User.first)
   end
+
+  def order_confirmation_user 
+    UserMailer.order_confirmation_user(User.first, Product.first)
+  end
 end
