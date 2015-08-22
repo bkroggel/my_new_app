@@ -20,6 +20,7 @@ class PaymentsController < ApplicationController
       # The card has been declined
     end
     redirect_to product_path(@product)
+    flash[:notice] = "Hey #{@user.first_name}! Thanks for ordering #{@product.name}"
     UserMailer.order_confirmation_user(@user, @product).deliver_now
     UserMailer.order_confirmation_admin(@user, @product).deliver_now
   end
