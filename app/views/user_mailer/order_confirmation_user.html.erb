@@ -85,8 +85,10 @@
         <tr>
           <td>
             <div class="box">
-              <p>Your order:<br>
-              <%= "#{@product.name}" %> </p>
+              <p>This is your ORDER CONFIRMATION for the following products:</p><br>
+              <p>1x <%= "#{@product.name}" %> </p><br><br>
+              <p>Your order was placed on <%= Time.now %></p>
+              <p>Thanks to <a href="https://stripe.com">STRIPE</a> your payment was already processed and you will receive your order asap!</p>
             </div>
           </td>
         </tr>
