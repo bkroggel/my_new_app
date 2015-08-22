@@ -21,5 +21,6 @@ class PaymentsController < ApplicationController
     end
     redirect_to product_path(@product)
     UserMailer.order_confirmation_user(@user, @product).deliver_now
+    UserMailer.order_confirmation_admin(@user, @product).deliver_now
   end
 end

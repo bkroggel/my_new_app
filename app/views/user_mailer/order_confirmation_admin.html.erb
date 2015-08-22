@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Info Message</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <style type="text/css">
+    
+    body {
+      background-color: rgba(0, 0, 0, 0.2);
+      width: 100%;
+      height: 100%;
+    }
+
+    .widths {
+      width: 70%;
+      height: 100%;
+      margin: 70px auto;
+      background-color: white;
+      padding: 0 60px;
+      border-radius: 5px;
+    }
+
+    p {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin: 0;
+      color: black;
+      text-decoration: none;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    .logo {
+      width:40px;
+      height:auto;
+      margin-left:auto;
+      margin-right:auto;
+      margin-top: 50px;
+    }
+
+    .top-space {
+      margin-top: 30px;
+    }
+
+    .message-container {
+      margin-top: 30px;
+      margin-bottom: 70px;
+    }
+
+    .call_hey {
+      text-align: center;
+      font-size: 2em;
+    }
+
+    .box {
+      padding: 30px;
+      border-radius: 5px;
+      width: 80%;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      margin: 30px auto;
+      line-height: 25px;
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="widths">
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <%= image_tag attachments["ideamanufactorylogo.png"].url, class: "logo" -%>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p class="top-space call_hey"> <%= "#{@user.first_name} #{@user.last_name}" %></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="box">
+              <p><%= "#{@user.first_name} #{@user.last_name}" %> just ordered the following products:</p><br>
+              <p>1x <%= "#{@product.name}" %> </p><br><br>
+              <p>The order was placed on <%= Time.now %></p>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

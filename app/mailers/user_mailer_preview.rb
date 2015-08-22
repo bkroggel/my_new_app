@@ -13,4 +13,8 @@ class UserMailerPreview < ActionMailer::Preview
   def order_confirmation_user 
     UserMailer.order_confirmation_user(User.first, Product.first)
   end
+
+  def order_confirmation_admin
+    UserMailer.order_confirmation_admin(User.first, Product.first)
+  end
 end
