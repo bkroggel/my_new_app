@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
       <div class="show_room">
-      <%= image_tag @product.image_url, 'data-action': 'zoom' %>
+      <%= image_tag @product.image_url, :'data-action' => 'zoom' %>
       </div>
     </div>
     
@@ -57,8 +57,9 @@
     </div>
   </div>
 
-<div id="product-review-comments">
+
   <%= render 'new_comment' %>
+<div id="product-review-comments">
   <%= render 'product_reviews' %>
 </div>  
   
