@@ -1,4 +1,4 @@
 $('#product-review-comments').append('<%= j (render 'products/product_reviews_just_created') %>');
-$('#comment_body').val('');
+$('#comment_body').val('').attr('readonly','readonly');
 $('.rating').raty({ starOff: '/assets/star-off.png', starOn: '/assets/star-on.png', readOnly: true, noRatedMsg: 'just reload the page to rate this product again', });
 $('#submit-button-comment').prop('disabled', true);
