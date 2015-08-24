@@ -4,9 +4,10 @@ class CommentsController < ApplicationController
     @product = Product.find(params[:product_id])
     @comment = @product.comments.new(comment_params)
     @comment.user = current_user
+    @comments = @product.comments.all.order("created_at DESC") #.paginate(:page => params[:page], :per_page => 5)
+    @comments = @comments.paginate(:page => params[:page], :per_page => 5)
     respond_to do |format|
       if @comment.save
-        @comments = Comment.all
         format.html { redirect_to @product, notice: 'Review was created successfully.' }
         format.json { render :show, status: :created, location: @product }
         #Montag, 24. August 2015
