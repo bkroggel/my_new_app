@@ -1,29 +1,33 @@
-<div class="width_frame">
-  <p id="notice"><%= notice %></p>
+<% cache(cache_key_for_products) do %>
+  <div class="width_frame">
+    <p id="notice"><%= notice %></p>
 
-  <h1>Listing Products</h1>
+    <h1>Listing Products</h1>
 
-  <div class="table-responsive">
-  <table class="product--table">
-    <thead>
-      <tr>
-        <th class="product_column">Name</th>
-        <th class="product_column">Description</th>
-        <th class="product_column">Image url</th>
-        <th class="product_column">Colour</th>
-        <th class="product_column">Price</th>
-        <th colspan="3" class="product_column"></th>
-      </tr>
-    </thead>
+    <div class="table-responsive">
+    <table class="product--table">
+      <thead>
+        <tr>
+          <th class="product_column">Name</th>
+          <th class="product_column">Description</th>
+          <th class="product_column">Image url</th>
+          <th class="product_column">Colour</th>
+          <th class="product_column">Price</th>
+          <th colspan="3" class="product_column"></th>
+        </tr>
+      </thead>
 
-    <tbody>
-        <%= render @products %>
-    </tbody>
-  </table>
+      <tbody>
+        <% cache(p) do %>
+          <%= render @products %>
+        <% end %>
+      </tbody>
+    </table>
+    </div>
+
+    <br>
+
+    
+    <%= link_to 'New Product', new_product_path, :class => "btn btn-default product_button" %>
   </div>
-
-  <br>
-
-  
-  <%= link_to 'New Product', new_product_path, :class => "btn btn-default product_button" %>
-</div>
+<% end %>

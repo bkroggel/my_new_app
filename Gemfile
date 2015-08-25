@@ -40,6 +40,9 @@ gem 'rspec-rails', '~> 3.0'
 # Stripe Payments
 gem 'stripe'
 
+# Cache Plugin DALLI
+gem 'dalli'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
