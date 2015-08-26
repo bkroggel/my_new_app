@@ -78,6 +78,26 @@ header h2 {
   margin: 0 auto;
 }
 
+p.notice,
+p.alert {
+  position: absolute;
+  z-index: 9999;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+p.notice {
+  color: rgba(0,255,177, 0.6);
+}
+
+p.alert {
+  color: rgba(224,0,77, 0.6);
+}
+
 /* ==========================================================================
    1.0 HEADER
    ========================================================================== */
