@@ -1,28 +1,40 @@
 <p id="notice"><%= notice %></p>
 
 <div class="width_frame">
-  <h1>Listing Users</h1>
+  <div class="recent-products-header">
+    <p>users</p>
+  </div>
+  <div class="row">
+    <% @users.each do |user| %>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="product-card">
+          <div class="product-card--user-frame">
+            <div class="product-card--user-picture">
+              <% if user.admin == true  %>
+                <%= image_tag 'ideamanufactorylogo_admin.png', :class => 'product-card--user-picture-img' %>
+              <% end  %>
+              <% if user.admin == false  %>
+                <%= image_tag 'ideamanufactorylogo_user.png', :class => 'product-card--user-picture-img'  %>
+              <% end  %>
+            </div>
+          </div>
 
-  <table class="product--table">
-    <thead>
-      <tr>
-        <th class="product_column">First name</th>
-        <th class="product_column">Last name</th>
-        <th class="product_column">eMail</th>
-        <th class="product_column">Last Signed in</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+          <div class="product-card--name">  
+            <p>
+              <%= user.first_name %>
+              <%= user.last_name %>
+            </p>
+          </div>
+          <div class="product-card--name">  
+            <p>
+              <%= user.email %>
+            </p>
+          </div>
+          <div class="product-card--signed-in">
+            <p><%= user.last_sign_in_at %></p>
+          </div>
 
-    <tbody>
-      <% @users.each do |user| %>
-        <tr>
-          <td class="product_column"><%= user.first_name %></td>
-          <td class="product_column"><%= user.last_name %></td>
-          <td class="product_column"><%= user.email %></td>
-          <td class="product_column"><%= user.last_sign_in_at %></td>
-
-          <td>
+          <div class="product-card--button">
             <div class="btn-group btn-group-tools">
               <%= link_to 'Show', user, :class => "btn btn-default" %>
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -35,15 +47,17 @@
                 <li><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></li>
               </ul>
             </div>
-          </td>
-
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <br>
-
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+    
+  <div class="recent-products-header products-header-space">
+    <p>add user</p>
+  </div>
   <%= link_to 'New User', new_user_path, class: "btn btn-default" %>
 
 </div>
+
+<%= render partial: "shared/footer" %>

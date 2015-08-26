@@ -316,6 +316,31 @@ header,
   }
 }
 
+.product-card--signed-in p {
+  text-align: center;
+  font-size: 10px;
+  padding-bottom: 10px;
+}
+
+.product-card--user-frame {
+  text-align: center;
+  padding-bottom: 70px;
+}
+
+.product-card--user-picture {
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 1px solid #292f35;  
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+}
+
+.product-card--user-picture-img {
+  margin: 0;
+  width: 90%;
+}
+
 .product-card--button {
   position: absolute;
   bottom: 1%;
