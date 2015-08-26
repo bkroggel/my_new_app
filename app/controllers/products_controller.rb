@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
     @products = Product.all
     if params[:q]
       search_term = params[:q]
-      @products = Product.where('name LIKE ?', "%#{search_term}%")
+      @products = Product.where('name LIKE ?', "%#{params[:q]}%")
       #return filtered list here
     else
       @products = Product.all
