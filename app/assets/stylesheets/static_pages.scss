@@ -65,6 +65,10 @@ header h2 {
   font-size: 1em;
 }
 
+.welcome-container h1 {
+  text-align: center;
+}
+
 /* 0.2. ELEMENTS
    ========================================================================== */
 
@@ -187,6 +191,25 @@ header,
 /* ==========================================================================
    2.0 Landing Page
    ========================================================================== */
+.main-logo {
+  background:url(/assets/ideamanufactorylogo.png) center;
+  background-size: cover;
+  height: 150px;
+  width: 138px;
+  margin: 0 auto;
+}
+
+.welcome-container {
+  padding-bottom: 80px;
+}
+
+.recent-products-header {
+  background-color: rgb(41, 47, 53);
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
 .carousel img {
   margin-top: 0;
 }
@@ -394,3 +417,59 @@ em.current {
   background-color:rgb(41, 47, 53);
   font-style: normal;
 }
+
+footer {
+  background-color: rgb(41, 47, 53);
+  padding: 50px 0;
+  width: 100%;
+  color: #777;
+  margin-top: 30px;
+}
+
+.stick-to-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer--inner-frame {
+  width: 90%;
+  margin: 0 auto;
+}
+
+footer a {
+  color: #777;
+  
+  &:hover {
+  background: none
+  }
+}
+
+footer .row {
+  margin-bottom: 10px;
+}
+
+footer .row .row-columns {
+  padding: 0;
+}
+
+footer .contact-links {
+  margin: 10px 0;
+}
+
+footer .ideamanufactorylogo {
+  background: url(/assets/ideamanufactorylogo.png) center;
+  background-size: cover;
+  width: 100px;
+  height: 109px;
+  float: left;
+
+  @media (min-width: 992px) {
+    float: right;
+  }
+}
+
+.copyright {
+  padding-top: 10px;
+}
+
