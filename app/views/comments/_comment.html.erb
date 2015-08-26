@@ -1,5 +1,5 @@
 <div class="product_reviews">
-  <% @comments.limit(1).each do |comment| %>
+  
     <div class="row product_reviews--row">
       <hr>
       <p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small></p>
@@ -10,6 +10,5 @@
         <%= link_to 'Destroy', product_comment_path(@product, comment), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs" %>
       <% end -%>
     </div>
-  <% end %>
 
 </div>
