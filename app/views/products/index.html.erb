@@ -1,33 +1,16 @@
-
-  <div class="width_frame">
-    <p id="notice"><%= notice %></p>
+<div class="width_frame">
+  <p id="notice"><%= notice %></p>
   <% cache(cache_key_for_products) do %>
-    <h1>Listing Products</h1>
+  <h1>Listing Products</h1>
 
-    <div class="table-responsive">
-    <table class="product--table">
-      <thead>
-        <tr>
-          <th class="product_column">Name</th>
-          <th class="product_column">Description</th>
-          <th class="product_column">Image url</th>
-          <th class="product_column">Colour</th>
-          <th class="product_column">Price</th>
-          <th colspan="3" class="product_column"></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% cache(p) do %>
-          <%= render @products %>
-        <% end %>
-      </tbody>
-    </table>
-    </div>
-
-    <br>
+  <div class="row">
+  <% cache(p) do %>
+    <%= render @products %>
+  <% end %>
+  </div>
 
     
-    <%= link_to 'New Product', new_product_path, :class => "btn btn-default product_button" %>
-  </div>
-<% end %>
+  <%= link_to 'New Product', new_product_path, :class => "btn btn-default product_button" %>
+
+  <% end %>
+</div>

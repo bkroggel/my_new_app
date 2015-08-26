@@ -1,23 +1,10 @@
-<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-  <div class="product-card">
-  
-
-  <div class="product-card-frame">
-    <%= image_tag product.image_url, :class => "product-card--img" %>
-  </div>
-  <div class="product-card--price">
-    <p><%= product.price%>€</p>
-  </div>
-  <div>
-    <%= product.name %>
-  </div>
-  <%= product.description %>
-  <%= product.colour %>
-  
-  
-    
-
-
+<tr>
+  <td class="product_column"><%= product.name %></td>
+  <td class="product_column"><%= product.description %></td>
+  <td class="product_column"><%= product.image_url %></td>
+  <td class="product_column"><%= product.colour %></td>
+  <td class="product_column"><%= product.price %></td>
+  <td>
     <div class="btn-group btn-group-tools">
       <%= link_to 'Show', product, :class => "btn btn-default" %>
       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -30,6 +17,5 @@
         <li><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></li>
       </ul>
     </div>
-
-  </div>
-</div>
+  </td>
+</tr>
