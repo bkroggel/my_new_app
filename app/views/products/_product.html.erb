@@ -8,16 +8,17 @@
   <div class="product-card--price">
     <p><%= product.price%>€</p>
   </div>
-  <div>
-    <%= product.name %>
+  <div class="product-card--name">
+    <p><%=h truncate(product.name, :length => 40, omission: '') {link_to '...', product, :class => 'truncate_link'} %></p>
   </div>
-  <%= product.description %>
-  <%= product.colour %>
+  <div>
+    <%=h truncate(product.description, :length => 80, omission: '') {link_to '...read more', product, :class => 'truncate_link'} %>
+  </div>
   
   
     
 
-
+  <div class="product-card--button">
     <div class="btn-group btn-group-tools">
       <%= link_to 'Show', product, :class => "btn btn-default" %>
       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -30,6 +31,7 @@
         <li><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></li>
       </ul>
     </div>
+  </div>
 
   </div>
 </div>

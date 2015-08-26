@@ -298,7 +298,29 @@ header,
   text-align: center;
   font-size: 20px;
   margin: 30px 0;
+}
 
+.product-card--name p {
+  text-align: center;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+.product-card .truncate_link {
+  color: #777;
+  font-size: 12px;
+  &:hover {
+    color: #292f35;
+    background: none;
+    text-decoration: underline;
+  }
+}
+
+.product-card--button {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;  
+  margin-left: -50px; 
 }
 
 
