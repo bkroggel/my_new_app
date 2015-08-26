@@ -1,7 +1,9 @@
 <div class="width_frame">
   <p id="notice"><%= notice %></p>
   <% cache(cache_key_for_products) do %>
-  <h1>Listing Products</h1>
+  <div class="recent-products-header">
+    <p>products</p>
+  </div>
 
   <div class="row">
   <% cache(p) do %>
@@ -9,8 +11,12 @@
   <% end %>
   </div>
 
-    
+  <div class="recent-products-header products-header-space">
+    <p>add products</p>
+  </div>  
   <%= link_to 'New Product', new_product_path, :class => "btn btn-default product_button" %>
 
   <% end %>
 </div>
+
+<%= render partial: "shared/footer" %>
