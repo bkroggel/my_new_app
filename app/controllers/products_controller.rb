@@ -15,14 +15,6 @@ class ProductsController < ApplicationController
     else
      @products = Product.all
     end
-
-
-    #if params[:q]
-      #search_term = params[:q]
-      #@products = Product.where('name like ?', "%#{search_term}%")
-    #else
-      #@products = Product.all
-    #end
   end
 
   # GET /products/1
